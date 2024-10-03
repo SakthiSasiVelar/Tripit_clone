@@ -1,0 +1,9 @@
+.container{
+    margin-right: 180px;
+}
+
+@media (min-width : 1055px) and (max-width:1200px) {
+    .container{
+        margin-right: 100px;
+    }
+}

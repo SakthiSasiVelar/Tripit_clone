@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width:1055px) {
+    .container{
+        width:424px;
+    }
+}
+
+@media (max-width:550px) {
+    .container{
+        width:324px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

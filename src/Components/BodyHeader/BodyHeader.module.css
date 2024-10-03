@@ -1,0 +1,35 @@
+
+.container{
+    padding-bottom: 345px;
+    padding-top: 7.1875rem;
+    margin-bottom: 0px;
+    background-image: url("../../assets/Images/HomePage-Hero.svg");
+    background-size: 1865px auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.upper_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  
+}
+
+
+@media (max-width:1055px) {
+    .container{
+        background-image: none;
+        padding-bottom: 180px;
+    }
+    
+}
+
+
+@media (max-width:550px) {
+    .container{
+        padding : 5rem 0 4rem 0;
+    }
+}

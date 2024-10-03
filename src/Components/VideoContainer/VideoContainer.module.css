@@ -1,0 +1,63 @@
+.container{
+    height: 457px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 6.25rem;
+    padding-top: 6.25rem;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url('../../assets/Images/HomePage-Video.svg');
+}
+
+
+.PlayButton_img{
+    width:116px;
+    height:117px;
+}
+
+.title{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.description{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.inner_container{
+    width:1140px;
+    margin: 0 auto;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+@media (max-width:1055px) {
+    .inner_container{
+        width: 960px;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
+    
+    .description{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:767px) {
+    .inner_container{
+        width: 540px
+    }
+    
+}
+
+@media (max-width:550px) {
+    .inner_container{
+        width: 340px;
+    }
+}

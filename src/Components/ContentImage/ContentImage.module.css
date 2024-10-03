@@ -1,0 +1,19 @@
+.phone_img{
+    width: 450px;
+    height: 450px;
+    margin-left: -0.3rem;
+}
+
+
+@media (max-width:1055px) {
+    .phone_img{
+        margin-left: 0;
+    }
+}
+
+@media (max-width:550px) {
+    .phone_img{
+        width: 345px;
+        height: 345px;
+    }
+}

@@ -1,0 +1,23 @@
+.outer_container{
+    margin-top: 0.5rem;
+}
+
+.inner_container{
+    max-width: 910px;
+    display: flex;
+    margin : 0 auto;
+    column-gap: 7rem;
+    padding-bottom: 100px;
+}
+
+
+@media (max-width:1055px) {
+    .inner_container{
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+    }
+}
+
