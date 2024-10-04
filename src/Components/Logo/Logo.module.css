@@ -1,5 +1,6 @@
 .container{
     margin-right: 180px;
+    cursor: pointer;
 }
 
 @media (min-width : 1055px) and (max-width:1200px) {
