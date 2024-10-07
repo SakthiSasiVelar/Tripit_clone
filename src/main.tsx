@@ -3,8 +3,23 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
-import HomePage from './Pages/HomePage/HomePage.tsx'
-import TripItPage from './Pages/TripItPage/TripItPage.tsx'
+import { lazy, Suspense } from 'react'
+import { QueryClientProvider , QueryClient } from '@tanstack/react-query'
+
+
+const TripItPage =  lazy(()=>import('./Pages/TripItPage/TripItPage.tsx'));
+const HomePage = lazy(()=>import('./Pages/HomePage/HomePage.tsx'))
+
+
+const queryClient = new QueryClient({
+  defaultOptions:{
+    queries:{
+      suspense : true
+    }
+  }
+}
+);
+
 
 const appRouter = createBrowserRouter([
   {
@@ -13,17 +28,28 @@ const appRouter = createBrowserRouter([
      children : [
       {
         path:'/',
-        element:<HomePage />
+        element:
+        <Suspense fallback={<div>Loading....</div>}>
+          <HomePage />
+        </Suspense>
+        
       },
       {
         path:'/free',
-        element:<TripItPage />
+        element:
+        <Suspense fallback={<div>Loading....</div>}>
+           <TripItPage />
+         </Suspense>
       }
      ]
   }
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={appRouter} />
+  <QueryClientProvider client={queryClient}>
+    <RouterProvider router={appRouter} />
+  </QueryClientProvider>
     
 )
+
+

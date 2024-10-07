@@ -18,7 +18,7 @@ const NavItems = () => {
         }
         <div className={Styles.btn_outer_container}>
             <div className={Styles.btn_inner_container}>
-                    <div>Sign Up-It's Free</div>
+                    <div>Sign Up-It's Free!</div>
                 </div>
         </div> 
         <LanguageDropDownButton />
